@@ -16,11 +16,11 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class StockPriceRestController extends BaseRestController {
   /**
-   * Retrieve multiple previously generated Missions.
+   * Returns hello world for now; will return stock price.
    */
   // @GetMapping to link http GET requests to this method
   @GetMapping(value = "${webservice.stockPricePath}", produces = {MediaType.APPLICATION_JSON_VALUE})
-  public String getStockPrice(){
+  public String getStockPrice() {
     return "Hello World";
   }
 
