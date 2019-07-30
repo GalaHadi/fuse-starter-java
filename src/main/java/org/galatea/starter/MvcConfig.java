@@ -4,8 +4,6 @@ import com.google.common.collect.Sets;
 import java.util.List;
 import lombok.extern.slf4j.Slf4j;
 import org.galatea.starter.utils.FuseTraceRepository;
-import org.galatea.starter.utils.http.converter.SettlementMissionCsvConverter;
-import org.galatea.starter.utils.http.converter.SettlementMissionXlsxConverter;
 import org.galatea.starter.utils.rest.FuseWebRequestTraceFilter;
 import org.springframework.beans.factory.ObjectProvider;
 import org.springframework.beans.factory.annotation.Value;
@@ -93,8 +91,6 @@ public class MvcConfig extends WebMvcConfigurerAdapter {
     converters.add(new ProtobufHttpMessageConverter()); // Protobuf, XML & JSON supported
     converters.add(new MappingJackson2HttpMessageConverter()); // JSON
     converters.add(new Jaxb2RootElementHttpMessageConverter()); // XML
-    converters.add(new SettlementMissionCsvConverter());
-    converters.add(new SettlementMissionXlsxConverter());
     super.configureMessageConverters(converters);
   }
 
