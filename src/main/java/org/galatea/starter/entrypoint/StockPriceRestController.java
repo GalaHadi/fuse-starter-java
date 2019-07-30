@@ -19,7 +19,7 @@ public class StockPriceRestController extends BaseRestController {
    * Returns hello world for now; will return stock price.
    */
   // @GetMapping to link http GET requests to this method
-  @GetMapping(value = "${webservice.stockPricePath}", produces = {MediaType.APPLICATION_JSON_VALUE})
+  @GetMapping(value = "${mvc.stockPricePath}", produces = {MediaType.APPLICATION_JSON_VALUE})
   public String getStockPrice() {
     return "Hello World";
   }
