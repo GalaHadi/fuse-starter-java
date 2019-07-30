@@ -14,9 +14,6 @@ spring:
          ddl-auto: update
       database-platform: org.hibernate.dialect.MySQLDialect
 mvc:
-   settleMissionPath: /settlementEngine
-   getMissionPath: /settlementEngine/mission/
-   getMissionsPath: /settlementEngine/missions
    max-size-trace-payload: 50000
 jms:
    listener-concurrency: 1-5
@@ -48,5 +45,4 @@ spring:
 ---
 # Mappings for Rest Controllers
 webservice:
-  halpath: /hal
   stockPricePath: /stockPrice
