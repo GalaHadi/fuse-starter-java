@@ -14,6 +14,10 @@ This readme will contain an index to features and their location in code.
   - Under User Variables, click New and add the path for the jdk-11 folder
 - Add JAVA_HOME to your path
   - Edit Path under User Variables and add a new entry for %JAVA_HOME%\bin
+  ####macOS instructions
+    - Download Oracle JDK 11. https://www.oracle.com/technetwork/java/javase/downloads/jdk11-downloads-5066655.html
+    - Run the installer
+    - Check if it is installed correctly. `java -version`
 
 ### Eclipse
 - Import as a maven project however you like. https://www.youtube.com/watch?v=BlkgrXb3L0c is one place to start if you're at a complete loss on this step.
@@ -53,6 +57,11 @@ This readme will contain an index to features and their location in code.
     - Note, the server port on which the application runs is set via program argument in the run configuration, --server.port=8080.  If you need to change which port to run on, change the argument in the run configuration.
   - To run unit tests, use the "Unit Tests" run config. See Testing section below for more info.
   - To validate code style, use the "Checkstyle" run config.
+  #### macOS instructions
+  - Check if maven is already installed. `mvn -version`
+  - If not, download and extract the zip. https://maven.apache.org/download.cgi
+  - Type the following into terminal. `export PATH=<path-of-extracted-folder>/bin:$PATH`. eg:`export PATH=~/Projects/apache-maven-3.6.3/bin:$PATH`
+  - Once you have verified that maven is installed, follow the steps above for IntelliJ. Note that options under File->Settings are found under Preferences instead.
 
 ### A note on spring profiles
 - The project comes with support for 3 spring profiles:
